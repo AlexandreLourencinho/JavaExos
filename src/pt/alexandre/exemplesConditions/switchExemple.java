@@ -10,8 +10,6 @@ public class switchExemple
         Scanner sc = new Scanner(System.in);
         System.out.println("entrez votre CHIFFRE :");
         c = sc.next().charAt(0);
-
-
         switch (c) {
             case '1', '3', '5', '7', '9' -> System.out.println("c est un chiffre impair");
             case '0', '2', '4', '6', '8' -> System.out.println("c est un chiffre pair");
