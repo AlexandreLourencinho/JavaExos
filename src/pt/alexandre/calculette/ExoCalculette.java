@@ -44,4 +44,51 @@ public class ExoCalculette
                     "de te foutre de ma gueule"+"\n"+" comme ça ? franchement tu me dégoûte sale fachiste.");
         }
     }
+
+//    /**
+//     *
+//     * @param nb1
+//     * @param nb2
+//     * @param ope
+//     * @return
+//     */
+//    public static double calculette(double nb1, double nb2, char ope)
+//    {
+//        double resultat =0;
+//        switch (ope) {
+//            case '+' -> {
+//                resultat = nb1 + nb2;
+////                System.out.println(resultat);
+//            }
+//            case '-' -> {
+//                resultat = nb1 - nb2;
+////                System.out.println(resultat);
+//            }
+//            case '/' -> {
+//                if (nb2 == 0) {
+//                    System.out.println("On ne divise pas par 0 salopiot! (sinon c'est + ou - l'infini, en gros)");
+//                    break;
+//                }
+//                resultat = nb1 / nb2;
+////                System.out.println(resultat);
+//            }
+//            case '*' -> {
+//                resultat = nb1 * nb2;
+////                System.out.println(resultat);
+//            }
+//            default -> System.out.println("nan mais rentre un opérateur quoi j'suis un programme moi j'suis pas ton pote. C'est in croyable ce que les gens se permettent juste par" +
+//                    "ce qu'on est des machines, j'ai le droit au respect aussi un peu non? Sans déconner,"+"\n"+" tu veux qu'on se tape? \" gna gna gna c'est une machine ça " +
+//                    "n'a pas d'âme\" je t'en foutrai moi ! ok j'suis ptete programmé que pour faire UN truc mais je le fais bien, est-ce que c'est vraiment la peine " +
+//                    "de te foutre de ma gueule"+"\n"+" comme ça ? franchement tu me dégoûte sale fachiste.");
+//        }
+//        return resultat;
+//    }
+
+//    public static
+
+
+
+
+
+
 }
