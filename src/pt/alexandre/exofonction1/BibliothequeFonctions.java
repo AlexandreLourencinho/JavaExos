@@ -122,5 +122,91 @@ public class BibliothequeFonctions
     }
 
 
+    public static void additionneur()
+    {
+        Scanner sc = new Scanner(System.in);
+        float chiffreUn;
+        float chiffreDeux;
+        float resultat;
+        System.out.println("Entrez votre premier chiffre : ");
+        chiffreUn = sc.nextFloat();
+        System.out.println("Entrez votre deuxième chiffre : ");
+        chiffreDeux = sc.nextFloat();
+        resultat = chiffreUn+chiffreDeux;
+        System.out.println(chiffreUn + " + " + chiffreDeux + " = " + resultat);
+
+    }
+
+
+    public static void codascii()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Entrez votre caractère unicode : ");
+        int ask = sc.nextInt();
+        char askc = (char)ask;
+        String asks = Character.toString(askc);
+        System.out.println(asks);
+    }
+
+
+    public static void convertir()
+    {
+        int secondes;
+        int sec,heur,min;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Entrez le nombre de secondes(un entier) à convertir : ");
+        secondes = sc.nextInt();
+        heur = secondes/3600;
+        min = (secondes%3600)/60;
+        sec = secondes % 60;
+        System.out.println(heur + " heures " + min + " minutes " + sec + " secondes ");
+    }
+
+    public static void triangle()
+    {
+        int nombre;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("entrez le nombre de lignes de votre triangle : ");
+        nombre = sc.nextInt();
+        for(int i=1; i<=nombre; i++){
+            for(int a=1; a<=nombre-i;a++){
+                System.out.print(" ");
+            }
+            for(int b=1;b<= 2*i-1; b++){
+                System.out.print("✡");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void diviseur()
+    {
+        Scanner sc = new Scanner(System.in);
+        float chiffreUn;
+        float chiffreDeux;
+        float resultat;
+        System.out.println("Entrez votre premier chiffre : ");
+        chiffreUn = sc.nextFloat();
+        System.out.println("Entrez votre deuxième chiffre : ");
+        chiffreDeux = sc.nextFloat();
+        resultat = chiffreUn/chiffreDeux;
+        System.out.println(chiffreUn + " + " + chiffreDeux + " = " + resultat);
+    }
+
+
+    public static void entierinf()
+    {
+        int nombre;
+        int u = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Entrez votre nombre : ");
+        nombre = sc.nextInt();
+        for(int i = 0; i < nombre; i++)
+        {
+            u++;
+            System.out.println(u);
+        }
+    }
+
 
 }
