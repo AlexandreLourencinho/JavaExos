@@ -7,7 +7,7 @@ public class ExoTablo3
     public static void main(String[] args)
     {
 
-        int[] tablo = {8, 6, 9, 4, 5, 0, 3, 1, 2, 7};
+        int[] tablo = {8, 6, 9, 9, 5, 0, 3, 1, 2, 7};
         System.out.println(Arrays.toString(tablo));
         int longueur = tablo.length, temp;
         for (int j = 0; j <= 10; j++) {
