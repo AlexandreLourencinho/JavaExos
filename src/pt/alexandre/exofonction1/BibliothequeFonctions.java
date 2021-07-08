@@ -1,5 +1,7 @@
 package pt.alexandre.exofonction1;
 
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class BibliothequeFonctions
@@ -208,5 +210,186 @@ public class BibliothequeFonctions
         }
     }
 
+    public static void majeurOuNon()
+    {
+        Scanner sc = new Scanner(System.in);
+        int annee;
+        int year = Calendar.getInstance().get(Calendar.YEAR);
+        System.out.println("Entrez votre année de naissance :");
+        annee = sc.nextInt();
+        if(year-annee>18){
+            System.out.println("Vous êtes majeur");
+        }else{
+            System.out.println("Vous êtes mineur");
+        }
+    }
+
+    public static void tableauValeurs()
+    {
+        int taille;
+        int valeur;
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> liste = new ArrayList<>();
+        System.out.println("Entrez la taille que vous voulez pour le tableau (en int) :");
+        taille=sc.nextInt();
+        for(int i=0; i<=taille-1;i++){
+            System.out.println("Entrez la valeur " + (i+1) + " à l'index " + i + " du tableau");
+            valeur = sc.nextInt();
+            liste.add(valeur);
+        }
+        System.out.println(liste);
+    }
+
+    public static void tableauPrenoms()
+    {
+        Scanner sc = new Scanner(System.in);
+        String prenom;
+        ArrayList<String> prenomTab = new ArrayList<>();
+        prenomTab.add("Alex");
+        prenomTab.add("Juliette");
+        prenomTab.add("Anais");
+        prenomTab.add("Fabien");
+        prenomTab.add("Noé");
+        prenomTab.add("Hocine");
+        prenomTab.add("Sana");
+        prenomTab.add("Behzad");
+        prenomTab.add("François");
+        prenomTab.add("Germain");
+        System.out.println("Voici les prénoms rangés dans le tableau : " + prenomTab);
+        System.out.println("Entrez le prénom a supprimer du tableau :");
+        prenom= sc.next();
+        if(prenomTab.contains(prenom)){
+            prenomTab.remove(prenomTab.indexOf(prenom));
+            System.out.println("Les étudiants restants seront donc : " + prenomTab);
+        }else{
+            System.out.println("Le prénom n'est pas dans le tableau !");
+        }
+    }
+
+
+    public static void moyenne()
+    {
+        float noteCoeff3;
+        float noteCoeff2;
+        float noteCoeff1;
+        float moyenne;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Entrez la note coefficient 3 :");
+        noteCoeff3 = sc.nextFloat();
+        System.out.println("Entrez la note coefficient 2 :");
+        noteCoeff2 = sc.nextFloat();
+        System.out.println("Entrez la note coefficient 1 :");
+        noteCoeff1 = sc.nextFloat();
+        moyenne = (noteCoeff1*3+noteCoeff2*2+noteCoeff3)/6;
+        System.out.println("La moyenne est de : " + moyenne);
+    }
+
+    public static void nbvoyelles()
+    {
+        Scanner sc = new Scanner(System.in);
+        String phrase;
+        char voy;
+        int count = 0,i;
+        System.out.println("Entrez votre phrase");
+        phrase = sc.nextLine();
+        for(i = 0 ; i< phrase.length(); i++){
+            voy = phrase.charAt(i);
+            if(voy=='a' || voy== 'y' || voy== 'o' || voy=='e' ||voy=='i' ||voy=='u'){
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+
+
+    public static void parite()
+    {
+        Scanner scanner = new Scanner(System.in);
+        float nombre;
+        System.out.println("Entrez un nombre");
+        nombre = scanner.nextFloat();
+        if(nombre%2!=0){
+            System.out.println("Le nombre est impair");
+        }else{
+            System.out.println("le nombre est pair");
+        }
+    }
+
+
+    public static void palindrome()
+    {
+        Scanner sc = new Scanner(System.in);
+        int i =0;
+        int nblettre;
+        boolean rep = true;
+        String phrase;
+        System.out.println("entrez votre mot pour vérifier si cest un palindrome :");
+        phrase = sc.nextLine();
+        nblettre= phrase.length()-1;
+        while(i<nblettre){
+            if(phrase.charAt(i) != phrase.charAt(nblettre)){
+                rep = false;
+            }
+            i++;
+            nblettre--;
+        }
+        if(rep){
+            System.out.println(phrase + " est un palindrome");
+        }else{
+            System.out.println(phrase + " n'est pas un palindrome");
+        }
+    }
+
+    public static void sommeEntier()
+    {
+        Scanner sc = new Scanner(System.in);
+        int nombre,i,u=0;
+        System.out.println("Entrez votre nombre : ");
+        nombre = sc.nextInt();
+        for (i=0; i<=nombre; i++){
+            u+=i;
+        }
+        System.out.println("la somme des entiers de 0 a " + nombre+" est égal a : " + u);
+    }
+
+
+    public static void sommeEntierInterval()
+    {
+        Scanner sc = new Scanner(System.in);
+        int nombre1, nombre2, resultat, affich;
+        System.out.println("Entrez votre premier nombre :");
+        nombre1 = sc.nextInt();
+        System.out.println("entrez votre deuxieme nombre : ");
+        nombre2 = sc.nextInt();
+        if (nombre2 > nombre1) {
+            affich = nombre1;
+            resultat = nombre1;
+            for (int i = nombre1; i < nombre2; i++) {
+                nombre1++;
+                resultat += nombre1;
+            }
+            System.out.println("La somme des entiers de " + affich + " jusqu'a " + nombre2 + " est de : " + resultat);
+        }else{
+            affich = nombre1;
+            resultat = nombre1;
+            for (int i = nombre1; i > nombre2; i--) {
+                nombre1--;
+                resultat += nombre1;
+            }
+            System.out.println("La somme des entiers de " + affich + " jusqu'a " + nombre2 + " est de : " + resultat);
+        }
+    }
+
+    public static void conversionTemp()
+    {
+        Scanner sc= new Scanner(System.in);
+        float celcius;
+        float faren;
+        System.out.println("Entrez votre temperature en farenheit :");
+        faren = sc.nextFloat();
+        celcius = ((5f/9f) * (faren-32));
+        System.out.println("La temperature correspondante en Celcius est de : " + celcius + "°C");
+    }
 
 }

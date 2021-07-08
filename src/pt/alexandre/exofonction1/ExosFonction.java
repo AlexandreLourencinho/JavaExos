@@ -26,6 +26,11 @@ public class ExosFonction
             System.out.println("10 : fonction dessin d'un triangle du nombre de lignes souhaité");
             System.out.println("11 : fonction de division de deux nombres");
             System.out.println("12 : fonction donnant les entiers allant de 0 au nombre souhaité");
+            System.out.println("13 : fonction permettant de découvrir si vous êtes majeur ou mineur");
+            System.out.println("14 : fonction permettant définir une taille de tableau et de le remplir");
+            System.out.println("15 : fonction tableau avec prenoms à supprimer");
+            System.out.println("16 : fonction permettant de calculer une moyenne de 3 notes");
+            System.out.println("17 : fonction permettant de calculer le nombre de voyelles d'un mot ou d'une phrase");
             System.out.println("0 : Terminer le programme.");
             choix = sc.nextInt();
             switch (choix) {
@@ -66,6 +71,26 @@ public class ExosFonction
                     diviseur();
                 case 12:
                     entierinf();
+                case 13:
+                    majeurOuNon();
+                case 14:
+                    tableauValeurs();
+                case 15:
+                    tableauPrenoms();
+                case 16:
+                    moyenne();
+                case 17:
+                    nbvoyelles();
+                case 18:
+                    parite();
+                case 19:
+                    palindrome();
+                case 20:
+                    sommeEntier();
+                case 21:
+                    sommeEntierInterval();
+                case 22:
+                    conversionTemp();
                 case 0:
                     continuer = false;
                     System.out.println("*** Merci d'avoir utilisé LouAl industries pour vos exercices sur les fonctions.***");
