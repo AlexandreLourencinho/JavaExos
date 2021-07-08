@@ -97,7 +97,7 @@ public class BibliothequeFonctions
         Scanner sc = new Scanner(System.in);
         System.out.println("Entrez votre phrase : ");
         String phrase = sc.nextLine();
-        System.out.println(phrase.split(" ").length);
+        System.out.println(phrase.split(" '").length);
     }
 
     public static int fibonCtion(int nombre)

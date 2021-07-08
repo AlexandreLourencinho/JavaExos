@@ -19,7 +19,7 @@ public class ExosFonction
             System.out.println("************************* 2 : fonction concaténation. ******************************************************");
             System.out.println("************************* 3 : fonction table de multiplication.*********************************************");
             System.out.println("************************* 4 : fonction calcul nombre de mots. **********************************************");
-            System.out.println("************************* 5 : fonction fibonassuite. /// /!\\ en construction /!\\");
+            System.out.println("************************* 5 : fonction fibonassuite. *******************************************************");
             System.out.println("************************* 6 : fonction compter le nombre d'occurence d'une lettre **************************");
             System.out.println("************************* 7 : fonction calculatrice. *******************************************************");
             System.out.println("************************* 8 : fonction conversion ascii en unicode.*****************************************");
