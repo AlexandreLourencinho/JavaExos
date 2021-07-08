@@ -102,6 +102,7 @@ public class BibliothequeFonctions
 
     public static int fibonCtion(int nombre)
     {
+        System.out.println(nombre);
         if (nombre == 0) {
             return 0;
         } else if (nombre == 1) {

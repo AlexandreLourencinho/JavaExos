@@ -54,16 +54,16 @@ public class ExosFonction
                 case 4:
                     nombreMots();
                     break;
-//                case 5 :
-//                    System.out.println("*** Fonction calculant les deux premiers termes de la suite de Fibonacci  ***");
-//                    System.out.println("*** à partir de l'indice que vous aurez définit !***");
-//                    Scanner sc2 = new Scanner(System.in);
-//                    int nombre;
-//                    System.out.println("Entrez l'indice à partir duquel vous désirez avoir le début de la suite :");
-//                    nombre = sc.nextInt();
-//                    int resultat =fibonCtion(nombre);
-//                    System.out.println("resultat =" + resultat);
-//                    break;
+                case 5 :
+                    System.out.println("*** Fonction calculant les deux premiers termes de la suite de Fibonacci  ***");
+                    System.out.println("*** à partir de l'indice que vous aurez définit !***");
+                    Scanner sc2 = new Scanner(System.in);
+                    int nombre;
+                    System.out.println("Entrez l'indice à partir duquel vous désirez avoir le début de la suite :");
+                    nombre = sc.nextInt();
+                    int resultat =fibonCtion(nombre);
+                    System.out.println("resultat =" + resultat);
+                    break;
                 case 6:
                     compterLettre();
                     break;
