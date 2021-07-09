@@ -25,7 +25,6 @@ public class BuildVehicule
         prix = sc.nextDouble();
         stock.add(vitesse);
         stock.add(prix);
-
         return stock;
     }
 
