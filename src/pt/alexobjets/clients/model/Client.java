@@ -30,7 +30,7 @@ public class Client
     {
         int diff;
         int tail;
-
+        // a faire dans fonctionsclient
 
 
 
