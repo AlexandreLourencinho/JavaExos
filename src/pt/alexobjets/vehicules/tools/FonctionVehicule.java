@@ -12,7 +12,7 @@ public class FonctionVehicule
     {
         switch (n){
             case 1:
-                Avion avi = (Avion) creatAvion();
+                Avion avi = creatAvion();
                 leSout(avi);
             break;
             case 2:
@@ -34,19 +34,19 @@ public class FonctionVehicule
         }
     }
 
-    public static Vehicule creatAvion()
+    public static Avion creatAvion()
     {
         ArrayList<Double> info = vitEtPrix("Avion");
         return new Avion(info.get(0), info.get(1));
     }
 
-    public static Vehicule creatMotocyclette()
+    public static Motocyclette creatMotocyclette()
     {
         ArrayList<Double> info = vitEtPrix("Motocyclette");
         return new Motocyclette(info.get(0), info.get(1));
     }
 
-    public static Vehicule creatBateau()
+    public static Bateau creatBateau()
     {
         ArrayList<Double> info = vitEtPrix("Bâteau");
         return new Bateau(info.get(0), info.get(1));
