@@ -2,13 +2,8 @@ package pt.alexobjets.formes;
 
 public abstract class Forme
 {
-    private String nom;
+    private String nom = "forme";
 
-
-    public Forme(String nom)
-    {
-        this.nom = nom;
-    }
 
     public float Aire()
     {

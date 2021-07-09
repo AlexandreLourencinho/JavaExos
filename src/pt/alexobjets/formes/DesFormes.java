@@ -7,17 +7,19 @@ public class DesFormes
 {
     public static void main(String[] args)
     {
+        int i=0;
         Scanner sc = new Scanner(System.in);
         ArrayList<Forme> tabForme = new ArrayList<Forme>();
-        tabForme.add(new Carre(4,"carré 1"));
-        tabForme.add(new Triangle(4,6,"triangle 1"));
-        tabForme.add(new Cercle(8,"cercle 1"));
-        tabForme.add(new Triangle(10,20,"triangle 2"));
-        tabForme.add(new Cercle(2, "cercle 2"));
-        tabForme.add(new Carre(16, "carré 2 "));
+        tabForme.add(new Carre(4));
+        tabForme.add(new Triangle(4,6));
+        tabForme.add(new Cercle(8));
+        tabForme.add(new Triangle(10,20));
+        tabForme.add(new Cercle(2));
+        tabForme.add(new Carre(16));
 //        System.out.println(tabForme);
         for(Forme form : tabForme){
-            System.out.printf("aire de %s : %.2f \n",form.getNom(),form.Aire());
+            i++;
+            System.out.printf("aire de la forme %d , un %s : %.2f \n",i,form.getNom(),form.Aire());
         }
     }
 }

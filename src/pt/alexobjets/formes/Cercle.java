@@ -4,10 +4,17 @@ public class Cercle extends Forme
 {
     private float rayon;
 
-    public Cercle(float rayon,String nom)
+    private String nom = "Cercle";
+
+    public Cercle(float rayon)
     {
-        super(nom);
         this.rayon = rayon;
+    }
+
+    @Override
+    public String getNom()
+    {
+        return nom;
     }
 
     @Override

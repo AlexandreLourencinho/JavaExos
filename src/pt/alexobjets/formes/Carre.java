@@ -4,11 +4,16 @@ public class Carre extends Forme
 {
     private float cotey;
 
+    private String nom="Carré";
 
-    public Carre(float cotey,String nom)
+    public Carre(float cotey)
     {
-        super(nom);
         this.cotey = cotey;
+    }
+    @Override
+    public String getNom()
+    {
+        return nom;
     }
 
 

@@ -6,12 +6,18 @@ public class Triangle extends Forme
 
     private float hauteur;
 
+    private String nom = " Triangle ";
 
-    public Triangle(float base, float hauteur, String nom)
+    public Triangle(float base, float hauteur)
     {
-        super(nom);
         this.base = base;
         this.hauteur = hauteur;
+    }
+
+    @Override
+    public String getNom()
+    {
+        return nom;
     }
 
     @Override
