@@ -1,6 +1,6 @@
 package pt.alexobjets.vehicules;
 
-import static pt.alexobjets.vehicules.gui.VehiculesGui.menu;
+import static pt.alexobjets.vehicules.gui.VehiculesGui.*;
 
 public class Main
 {
