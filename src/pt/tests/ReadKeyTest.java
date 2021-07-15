@@ -6,10 +6,18 @@ import org.germain.tool.ManaBox;
 import org.junit.Assert;
 import org.junit.Test;
 import pt.alextd1.model.Message;
+import pt.alextd1.tools.TdFonctions;
 import pt.alextd1.tools.Transcoder;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
 public class ReadKeyTest
 {
@@ -107,10 +115,67 @@ public class ReadKeyTest
     @Test
     public void testediter()
     {
-        Message mess = new Message();
+        String dir = System.getProperty("user.dir");
+        System.out.println(dir);
+        Path path = Paths.get(dir,"unfichier.txt");
+        if(Files.exists(path)){
+            System.out.println("deja là ");
+        }else{
+            System.out.println("pas deja là");
+        }
+
+        String test = "exemple un";
+        ArrayList<String> testt = new ArrayList<>();
+        for(int i=0; i<=10;i++){
+            testt.add("bonjour " + i + " fois");
+        }
+        for(String chaine : testt) {
+            try {
+                Files.writeString(path, chaine + System.lineSeparator(), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+            }
+            catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        List<String> testtt = new ArrayList<>();
+        try {
+            testtt =  Files.readAllLines(path);
+            System.out.println(testtt);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        for(String line : testtt){
+//            System.out.println(line);
+        }
+    }
+
+    @Test
+    public void testpath()
+    {
+        TdFonctions td = new TdFonctions();
+        Path path =td.StringToPaths("test");
+        System.out.println(path);
+    }
+
+    @Test
+    public void testecriturefichier()
+    {
+        Scanner sc = new Scanner(System.in);
+        TdFonctions td = new TdFonctions();
+        Message mess;
+        String clef,msgclair,msgcode;
+        System.out.println("Entrez le nom du fichier contenant la clef :");
+        clef = sc.nextLine();
+        clef = "clef";
+        System.out.println("Entrez le nom du fichier contenant le texte à encoder :");
+        msgcode = sc.nextLine();
+//        msgcode="messagecode";
+        msgclair="messageDecode";
+        mess = new Message(true,td.StringToPaths(msgclair),td.StringToPaths(msgcode),td.StringToPaths(clef));
         mess.editer();
     }
 
-
+//    public Message(Boolean bool, Path cheminMessageDecode, Path cheminMessageEncode, Path cheminClef)
 
 }
