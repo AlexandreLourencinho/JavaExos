@@ -19,14 +19,18 @@ public class Transcoder
     {
         // initialisation des variables, ici tempchar sera uniquement une variable tampon
         char tempchar;
+
         // décryptage de la clef
         String clearKey = ManaBox.decrypt(clef);
         String debut = "AA";
+
         // pour chaque character de la clef décryptée
         for (char c : clearKey.toCharArray()) {
+
             // entrer clef valeur / valeur clef dans les tableaux de codage et décodage
             tableauDecode.put(debut, c);
             tableauEncode.put(c, debut);
+
             // if permettant l'incrémentation des char et donc de passer de AA à AB, etc...
             // + si le char position (1) est Z, il repasse à A et c'est le premier char (position 0) qui s'incrémente de un
             // permettant de passer de AZ à BA
