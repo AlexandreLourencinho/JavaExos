@@ -15,19 +15,21 @@ public class Gui
         TdFonctions td = new TdFonctions();
         Message mess;
         int choix;
-        String clef, msgclair, msgcode;
+        String clef, msgclair, msgcode,chxclef;
         boolean continuer = true;
 
         // boucle menu
         do {
-            System.out.println("╔═══════════════════════════╗");
-            System.out.println("║  Système d'encodage et de ║");
-            System.out.println("║    décodage de messages   ║");
-            System.out.println("╠═══════════════════════════╣");
-            System.out.println("║   1) Encoder un message   ║");
-            System.out.println("║   2) Décoder un message   ║");
-            System.out.println("║   0) Quitter le programme ║");
-            System.out.println("╚═══════════════════════════╝");
+            System.out.println("""
+                    ╔═══════════════════════════╗
+                    ║  Système d'encodage et de ║
+                    ║    décodage de messages   ║
+                    ╠═══════════════════════════╣
+                    ║   1) Encoder un message   ║
+                    ║   2) Décoder un message   ║
+                    ║   0) Quitter le programme ║
+                    ╚═══════════════════════════╝
+                    """);
             choix = sc.nextInt();
 
             // switch pour le menu
@@ -35,10 +37,19 @@ public class Gui
                 case 1 -> {
                     //premier cas
 
-                    // récupération des noms de fichiers contenant la clef
-                    System.out.println("Entrez le nom du fichier contenant la clef :");
+                    System.out.println("Avez-vous une clef? oui/non");
                     sc.nextLine();
-                    clef = sc.nextLine();
+                    chxclef = sc.nextLine().toLowerCase();
+                    if(chxclef.equals("oui")){
+                        // récupération des noms de fichiers contenant la clef
+                        System.out.println("Entrez le nom du fichier contenant la clef :");
+                        sc.nextLine();
+                        clef = sc.nextLine();
+                    }else{
+                        System.out.println("Entrez le nom du fichier dans lequel vous vouler créer votre clef :");
+                        clef=sc.nextLine();
+                    }
+
 
                     // récupération du texte a ENCODER
                     System.out.println("Entrez le nom du fichier contenant le texte à encoder :");
